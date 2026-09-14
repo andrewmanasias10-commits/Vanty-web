@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="nbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1a40"/>
+      <stop offset="1" stop-color="#0a1230"/>
+    </linearGradient>
+    <linearGradient id="nv" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <circle cx="900" cy="220" r="240" fill="#1d4ed8" opacity="0.12"/>
+  <circle cx="280" cy="700" r="220" fill="#7c3aed" opacity="0.12"/>
+  <g fill="#1D4ED8" opacity="0.09">
+    <circle cx="200" cy="200" r="3"/><circle cx="260" cy="200" r="3"/><circle cx="320" cy="200" r="3"/><circle cx="200" cy="260" r="3"/><circle cx="260" cy="260" r="3"/><circle cx="320" cy="260" r="3"/>
+    <circle cx="940" cy="640" r="3"/><circle cx="1000" cy="640" r="3"/><circle cx="940" cy="700" r="3"/><circle cx="1000" cy="700" r="3"/>
+  </g>
+
+  <!-- V monogram -->
+  <rect x="470" y="300" width="260" height="260" rx="56" fill="#eef4ff" opacity="0.8"/>
+  <rect x="500" y="330" width="200" height="200" rx="44" fill="none" stroke="url(#nv)" stroke-width="4"/>
+  <path d="M548 388 L600 488 L652 388" fill="none" stroke="url(#nv)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="600" y="630" fill="#0b1020" font-size="40" font-weight="900" text-anchor="middle" letter-spacing="-1">VANTY</text>
+  <text x="600" y="664" fill="#5b647a" font-size="16" text-anchor="middle">Tecnología con propósito · Perú → LATAM</text>
+
+  <!-- floating pills -->
+  <g font-size="14" font-weight="700">
+    <rect x="180" y="360" width="150" height="52" rx="26" fill="#13224d" stroke="#26356b"/><text x="255" y="392" fill="#bcd3ff" text-anchor="middle">🩺 Salud</text>
+    <rect x="150" y="470" width="180" height="52" rx="26" fill="#13224d" stroke="#26356b"/><text x="240" y="502" fill="#bcd3ff" text-anchor="middle">🎓 Educación</text>
+    <rect x="860" y="330" width="160" height="52" rx="26" fill="#13224d" stroke="#26356b"/><text x="940" y="362" fill="#c4b5fd" text-anchor="middle">🤖 IA aplicada</text>
+    <rect x="880" y="450" width="170" height="52" rx="26" fill="#13224d" stroke="#26356b"/><text x="965" y="482" fill="#c4b5fd" text-anchor="middle">💜 Bienestar</text>
+  </g>
+
+  <!-- connecting dots -->
+  <g stroke="#3a4a85" stroke-width="2" stroke-dasharray="2 8" opacity="0.6">
+    <line x1="330" y1="386" x2="500" y2="410"/>
+    <line x1="330" y1="496" x2="500" y2="470"/>
+    <line x1="860" y1="356" x2="700" y2="410"/>
+    <line x1="880" y1="476" x2="700" y2="470"/>
+  </g>
+</svg>

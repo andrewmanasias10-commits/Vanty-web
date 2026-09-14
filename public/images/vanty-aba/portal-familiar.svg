@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Inter, Arial, sans-serif">
+  <style>
+    .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.8s ease forwards .3s}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .bar{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:grow 1.1s cubic-bezier(.22,1,.36,1) forwards .7s}
+    @keyframes grow{to{transform:scaleX(1)}}
+    .pulse{animation:pulse 2.2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+    .pop{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .55s cubic-bezier(.34,1.56,.64,1) forwards 1.6s}
+    @keyframes pop{to{transform:scale(1)}}
+  </style>
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3fb"/>
+      <stop offset="1" stop-color="#e2e9f9"/>
+    </linearGradient>
+    <linearGradient id="pa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D4ED8" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#1D4ED8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="psh" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#1b2a52" flood-opacity="0.16"/></filter>
+    <clipPath id="twP"><rect x="642" y="238" width="0" height="18"><animate attributeName="width" values="0;0;258;258;0" keyTimes="0;0.1;0.55;0.92;1" dur="5s" repeatCount="indefinite"/></rect></clipPath>
+  </defs>
+  <circle cx="980" cy="170" r="180" fill="#dbe6fb" opacity="0.45"/>
+  <circle cx="270" cy="760" r="150" fill="#e9defb" opacity="0.4"/>
+
+  <!-- Phone -->
+  <rect x="120" y="120" width="380" height="700" rx="46" fill="#0c1838" filter="url(#psh)"/>
+  <rect x="136" y="136" width="348" height="668" rx="34" fill="#f6f8fc"/>
+  <rect x="136" y="136" width="348" height="92" rx="34" fill="#1D4ED8"/>
+  <rect x="136" y="190" width="348" height="38" fill="#1D4ED8"/>
+  <circle cx="178" cy="182" r="20" fill="#ffffff" opacity="0.25"/>
+  <text x="210" y="176" fill="#ffffff" font-size="14" font-weight="700">Hola, familia 👋</text>
+  <text x="210" y="196" fill="#cfe0fb" font-size="12">Progreso de Mateo</text>
+
+  <!-- progress card -->
+  <rect x="160" y="252" width="300" height="170" rx="18" fill="#ffffff"/>
+  <text x="182" y="284" fill="#0b1020" font-size="13" font-weight="700">Avance semanal</text>
+  <text x="420" y="284" fill="#16a34a" font-size="12" font-weight="700" text-anchor="end">+12%</text>
+  <path d="M182 392 L228 372 L274 380 L320 350 L366 332 L412 306 L438 296 L438 400 L182 400 Z" fill="url(#pa)"/>
+  <polyline class="ln" pathLength="1" points="182,392 228,372 274,380 320,350 366,332 412,306 438,296" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle r="4" fill="#1D4ED8"><animateMotion dur="3s" begin="1.2s" repeatCount="indefinite" calcMode="linear" path="M182 392 L228 372 L274 380 L320 350 L366 332 L412 306 L438 296"/></circle>
+
+  <!-- objective row -->
+  <rect x="160" y="440" width="300" height="64" rx="14" fill="#ffffff"/>
+  <circle class="pop" cx="192" cy="472" r="16" fill="#dcfce7"/><path d="M185 472 l5 5 l9 -10" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="220" y="468" fill="#0b1020" font-size="12.5" font-weight="600">Comunicación funcional</text>
+  <text x="220" y="486" fill="#16a34a" font-size="11">Meta alcanzada · 85%</text>
+
+  <!-- home activity -->
+  <rect x="160" y="520" width="300" height="84" rx="14" fill="#eff6ff"/>
+  <text x="182" y="550" fill="#1e40af" font-size="12.5" font-weight="700">🏠 Actividad para casa</text>
+  <text x="182" y="572" fill="#3b5bdb" font-size="11">Juego de turnos · 10 min/día</text>
+  <text x="182" y="590" fill="#3b5bdb" font-size="11">Sugerido por ARIA</text>
+
+  <!-- message -->
+  <rect x="160" y="620" width="300" height="64" rx="14" fill="#ffffff"/>
+  <circle cx="192" cy="652" r="16" fill="#ede9fe"/><text x="192" y="657" fill="#7c3aed" font-size="11" font-weight="700" text-anchor="middle">LR</text>
+  <text x="220" y="648" fill="#0b1020" font-size="12" font-weight="600">Lucía · Especialista</text>
+  <text x="220" y="666" fill="#9aa3b5" font-size="11">¡Excelente semana de Mateo!</text>
+
+  <!-- tab bar -->
+  <rect x="136" y="730" width="348" height="74" fill="#ffffff"/>
+  <circle cx="208" cy="767" r="6" fill="#1D4ED8"/><circle cx="300" cy="767" r="6" fill="#c7d0e0"/><circle cx="392" cy="767" r="6" fill="#c7d0e0"/>
+
+  <!-- floating cards -->
+  <g>
+    <rect x="560" y="180" width="430" height="120" rx="18" fill="#ffffff" stroke="#e3e8f2" filter="url(#psh)"/>
+    <circle class="pulse" cx="606" cy="240" r="22" fill="#1257e6"/><path d="M606 231 c-4 0 -7 3 -7 7 v3 c0 2 -1 3 -2 4 h18 c-1 -1 -2 -2 -2 -4 v-3 c0 -4 -3 -7 -7 -7z" fill="#fff"/><path d="M603 247 a3 3 0 0 0 6 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="644" y="226" fill="#0b1020" font-size="15" font-weight="700">Aviso para la familia</text>
+    <text x="644" y="250" fill="#5b647a" font-size="12.5" clip-path="url(#twP)">“Mateo alcanzó un nuevo objetivo 🎉”</text>
+    <text x="644" y="272" fill="#9aa3b5" font-size="11">Enviado automáticamente · hoy 12:04</text>
+
+    <rect x="600" y="330" width="470" height="150" rx="18" fill="#ffffff" stroke="#e3e8f2" filter="url(#psh)"/>
+    <text x="628" y="368" fill="#0b1020" font-size="15" font-weight="700">Reporte de sesión</text>
+    <text x="628" y="392" fill="#9aa3b5" font-size="12">Generado por ARIA · 8 s</text>
+    <rect x="628" y="408" width="414" height="9" rx="4.5" fill="#eef1f6"/><rect class="bar" x="628" y="408" width="380" height="9" rx="4.5" fill="#1D4ED8"/>
+    <rect x="628" y="428" width="414" height="9" rx="4.5" fill="#eef1f6"/><rect class="bar" x="628" y="428" width="300" height="9" rx="4.5" fill="#cfe0fb"/>
+    <rect x="628" y="448" width="280" height="9" rx="4.5" fill="#eef1f6"/>
+
+    <rect x="560" y="512" width="250" height="120" rx="18" fill="#0c1838"/>
+    <text x="586" y="548" fill="#aab6d4" font-size="12">Próxima sesión</text>
+    <text x="586" y="584" fill="#ffffff" font-size="22" font-weight="800">Mañana 09:00</text>
+    <text x="586" y="610" fill="#60a5fa" font-size="12" font-weight="700">Recordatorio activo</text>
+
+    <rect x="828" y="512" width="242" height="120" rx="18" fill="#eff6ff" stroke="#dbe6fb"/>
+    <text x="852" y="548" fill="#1e40af" font-size="12">Mensajes</text>
+    <text x="852" y="584" fill="#1D4ED8" font-size="22" font-weight="800">3 nuevos</text>
+    <text x="852" y="610" fill="#3b5bdb" font-size="12">del equipo clínico</text>
+  </g>
+
+  <text x="560" y="700" fill="#0b1020" font-size="26" font-weight="800">Portal familiar</text>
+  <text x="560" y="730" fill="#5b647a" font-size="15">Las familias, conectadas al progreso en tiempo real.</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="130 138 928 700" font-family="Inter, Arial, sans-serif">
+  <style>
+    .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s ease forwards .5s}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .bar{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:grow 1s cubic-bezier(.22,1,.36,1) forwards}
+    @keyframes grow{to{transform:scaleX(1)}}
+    .rise{opacity:0;transform:translateY(12px);animation:rise .6s cubic-bezier(.22,1,.36,1) forwards}
+    @keyframes rise{to{opacity:1;transform:none}}
+    .pulse{animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+    .pop{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .5s cubic-bezier(.34,1.56,.64,1) forwards}
+    @keyframes pop{to{transform:scale(1)}}
+    .march{stroke-dasharray:7 7;animation:march 1s linear infinite}
+    @keyframes march{to{stroke-dashoffset:-28}}
+    .cur{animation:blink 1s step-end infinite}
+    @keyframes blink{50%{opacity:0}}
+  </style>
+  <defs>
+    <filter id="ssh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#1b2a52" flood-opacity="0.16"/>
+    </filter>
+    <clipPath id="ttl"><rect x="206" y="244" width="0" height="34"><animate attributeName="width" values="0;0;320" keyTimes="0;.18;.7" dur="3.4s" begin="0s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="appttl"><rect x="836" y="468" width="0" height="22"><animate attributeName="width" values="0;0;120" keyTimes="0;.32;.8" dur="3.4s" begin="0s" repeatCount="indefinite"/></rect></clipPath>
+  </defs>
+
+  <!-- browser window -->
+  <rect x="150" y="150" width="720" height="520" rx="18" fill="#ffffff" stroke="#e3e8f2" stroke-width="2" filter="url(#ssh)"/>
+  <rect x="150" y="150" width="720" height="50" rx="18" fill="#0c1838"/>
+  <rect x="150" y="178" width="720" height="22" fill="#0c1838"/>
+  <circle cx="182" cy="175" r="6" fill="#ff5f57"/><circle cx="204" cy="175" r="6" fill="#febc2e"/><circle cx="226" cy="175" r="6" fill="#28c840"/>
+  <rect x="380" y="163" width="260" height="24" rx="12" fill="#1b2a52"/><text x="510" y="180" fill="#8ea3d6" font-size="11" text-anchor="middle">tu-plataforma.com</text>
+
+  <!-- web content header -->
+  <rect x="178" y="228" width="664" height="90" rx="12" fill="#0f766e"/>
+  <text x="206" y="268" fill="#ffffff" font-size="18" font-weight="800" clip-path="url(#ttl)">Tu plataforma, a tu medida</text>
+  <rect x="206" y="252" width="2.5" height="22" fill="#a7f3d0" class="cur"/>
+  <text class="rise" style="animation-delay:1.0s" x="206" y="294" fill="#a7f3d0" font-size="12">Diseñada para tu operación real</text>
+  <rect x="700" y="252" width="118" height="40" rx="10" fill="#ffffff"/><text x="759" y="277" fill="#0f766e" font-size="12" font-weight="700" text-anchor="middle">Empezar</text>
+
+  <!-- 3 feature cards -->
+  <rect x="178" y="338" width="206" height="120" rx="12" fill="#f6f8fc" stroke="#eef1f6"/>
+  <rect x="406" y="338" width="206" height="120" rx="12" fill="#f6f8fc" stroke="#eef1f6"/>
+  <rect x="634" y="338" width="208" height="120" rx="12" fill="#f6f8fc" stroke="#eef1f6"/>
+  <circle class="pop" style="animation-delay:.6s" cx="212" cy="372" r="14" fill="#dbe6fb"/>
+  <circle class="pop" style="animation-delay:.74s" cx="440" cy="372" r="14" fill="#ccfbf1"/>
+  <circle class="pop" style="animation-delay:.88s" cx="668" cy="372" r="14" fill="#ede9fe"/>
+  <rect class="bar" style="animation-delay:.7s" x="196" y="402" width="150" height="9" rx="4" fill="#e6ebf4"/><rect class="bar" style="animation-delay:.8s" x="196" y="420" width="110" height="9" rx="4" fill="#eef1f6"/>
+  <rect class="bar" style="animation-delay:.84s" x="424" y="402" width="150" height="9" rx="4" fill="#e6ebf4"/><rect class="bar" style="animation-delay:.94s" x="424" y="420" width="110" height="9" rx="4" fill="#eef1f6"/>
+  <rect class="bar" style="animation-delay:.98s" x="652" y="402" width="150" height="9" rx="4" fill="#e6ebf4"/><rect class="bar" style="animation-delay:1.08s" x="652" y="420" width="110" height="9" rx="4" fill="#eef1f6"/>
+
+  <!-- data table -->
+  <rect x="178" y="478" width="500" height="160" rx="12" fill="#ffffff" stroke="#eef1f6"/>
+  <text x="200" y="512" fill="#0b1020" font-size="13" font-weight="700">Tabla de datos</text>
+  <g stroke="#eef1f6" stroke-width="1.5"><line x1="200" y1="528" x2="656" y2="528"/><line x1="200" y1="560" x2="656" y2="560"/><line x1="200" y1="592" x2="656" y2="592"/></g>
+  <rect x="200" y="540" width="120" height="10" rx="5" fill="#e6ebf4"/><rect x="360" y="540" width="80" height="10" rx="5" fill="#e6ebf4"/><rect class="bar" style="animation-delay:.9s" x="520" y="540" width="100" height="10" rx="5" fill="#dcfce7"/>
+  <rect x="200" y="572" width="140" height="10" rx="5" fill="#eef1f6"/><rect x="360" y="572" width="70" height="10" rx="5" fill="#eef1f6"/><rect class="bar" style="animation-delay:1.05s" x="520" y="572" width="100" height="10" rx="5" fill="#dbe6fb"/>
+  <rect x="200" y="604" width="110" height="10" rx="5" fill="#eef1f6"/><rect x="360" y="604" width="90" height="10" rx="5" fill="#eef1f6"/><rect class="bar" style="animation-delay:1.2s" x="520" y="604" width="100" height="10" rx="5" fill="#fde68a"/>
+  <!-- moving scan line across the table -->
+  <line x1="200" x2="656" y1="528" y2="528" stroke="#0f766e" stroke-width="2" opacity=".5" stroke-linecap="round">
+    <animate attributeName="y1" values="528;604;528" dur="3.2s" begin="1.3s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="528;604;528" dur="3.2s" begin="1.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.5;.5;0" keyTimes="0;.1;.9;1" dur="3.2s" begin="1.3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- automation donut -->
+  <rect x="700" y="478" width="142" height="160" rx="12" fill="#0c1838"/>
+  <text x="722" y="512" fill="#aab6d4" font-size="11">Automatización</text>
+  <circle cx="771" cy="568" r="40" fill="none" stroke="#1b2a52" stroke-width="12"/>
+  <circle cx="771" cy="568" r="40" fill="none" stroke="#60a5fa" stroke-width="12" stroke-linecap="round" transform="rotate(-90 771 568)" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100">
+    <animate attributeName="stroke-dashoffset" values="100;100;22" keyTimes="0;.2;.85" dur="3.4s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <!-- dot traveling on the arc -->
+  <circle r="4" fill="#bfdbfe">
+    <animateMotion dur="3.4s" begin="0s" repeatCount="indefinite" keyPoints="0;0;.78;.78" keyTimes="0;.2;.85;1" calcMode="linear" path="M771 528 a40 40 0 0 1 0 80 a40 40 0 0 1 0 -80"/>
+  </circle>
+  <text x="771" y="574" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">78%</text>
+
+  <!-- phone overlap -->
+  <rect x="800" y="430" width="220" height="380" rx="32" fill="#0c1838" filter="url(#ssh)"/>
+  <rect x="814" y="444" width="192" height="352" rx="22" fill="#ffffff"/>
+  <rect x="814" y="444" width="192" height="70" rx="22" fill="#0f766e"/>
+  <text x="836" y="486" fill="#fff" font-size="13" font-weight="700" clip-path="url(#appttl)">App móvil</text>
+  <rect class="rise" style="animation-delay:1.4s" x="836" y="540" width="148" height="48" rx="12" fill="#f1f4fa"/>
+  <rect class="rise" style="animation-delay:1.58s" x="836" y="600" width="148" height="48" rx="12" fill="#f1f4fa"/>
+  <rect class="rise" style="animation-delay:1.76s" x="836" y="660" width="148" height="48" rx="12" fill="#ecfdf5"/>
+  <rect x="836" y="724" width="148" height="44" rx="12" fill="#0f766e" class="pulse"/><text x="910" y="751" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">Enviar</text>
+
+  <!-- code accent: connector with marching dashes -->
+  <path class="march" d="M168 736 H760" fill="none" stroke="#0f766e" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;.4" keyTimes="0;.55;.7" dur="3.4s" begin="0s" repeatCount="indefinite"/>
+  </path>
+  <text x="150" y="730" fill="#0f766e" font-size="22" font-weight="800" font-family="monospace">&lt;/&gt;</text>
+  <text x="196" y="730" fill="#0b1020" font-size="20" font-weight="800">Del prototipo a producción</text>
+  <text x="196" y="758" fill="#5b647a" font-size="14">Web, móvil, dashboards e integraciones — con IA donde suma.</text>
+</svg>

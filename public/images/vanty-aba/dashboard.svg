@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Inter, Arial, sans-serif">
+  <style>
+    .ln{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.9s ease forwards .25s}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .bar{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:grow 1.1s cubic-bezier(.22,1,.36,1) forwards .7s}
+    @keyframes grow{to{transform:scaleX(1)}}
+    .pulse{animation:pulse 2.2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .pop{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .55s cubic-bezier(.34,1.56,.64,1) forwards 1.9s}
+    @keyframes pop{to{transform:scale(1)}}
+  </style>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D4ED8" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#1D4ED8" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="win"><rect x="24" y="24" width="1152" height="852" rx="22"/></clipPath>
+    <filter id="dsh" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#1b2a52" flood-opacity="0.18"/></filter>
+    <clipPath id="twS"><rect x="920" y="52" width="0" height="18"><animate attributeName="width" values="0;0;74;74;0" keyTimes="0;0.12;0.5;0.9;1" dur="4.2s" repeatCount="indefinite"/></rect></clipPath>
+  </defs>
+
+  <rect x="24" y="24" width="1152" height="852" rx="22" fill="#ffffff" filter="url(#dsh)"/>
+
+  <g clip-path="url(#win)">
+    <!-- Sidebar -->
+    <rect x="24" y="24" width="252" height="852" fill="#0c1838"/>
+    <circle cx="66" cy="70" r="15" fill="#1D4ED8"/>
+    <path d="M59 64 l7 14 l7 -14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="76" fill="#ffffff" font-size="17" font-weight="700">VANTY ABA</text>
+
+    <rect x="44" y="150" width="212" height="44" rx="11" fill="#1D4ED8"/>
+    <circle cx="68" cy="172" r="5" fill="#fff"/><text x="86" y="177" fill="#ffffff" font-size="14" font-weight="600">Pacientes</text>
+    <circle cx="68" cy="226" r="5" fill="#5e6c96"/><text x="86" y="231" fill="#aab6d4" font-size="14">Programas ABA</text>
+    <circle cx="68" cy="270" r="5" fill="#5e6c96"/><text x="86" y="275" fill="#aab6d4" font-size="14">Sesiones</text>
+    <circle cx="68" cy="314" r="5" fill="#5e6c96"/><text x="86" y="319" fill="#aab6d4" font-size="14">Agenda</text>
+    <circle cx="68" cy="358" r="5" fill="#5e6c96"/><text x="86" y="363" fill="#aab6d4" font-size="14">Facturación</text>
+    <circle cx="68" cy="402" r="5" fill="#5e6c96"/><text x="86" y="407" fill="#aab6d4" font-size="14">Evaluaciones</text>
+    <rect x="44" y="784" width="212" height="48" rx="12" fill="#15224a"/>
+    <circle cx="70" cy="808" r="11" fill="#60a5fa"/>
+    <text x="90" y="804" fill="#fff" font-size="12" font-weight="700">ARIA</text>
+    <text x="90" y="820" fill="#8ea3d6" font-size="10">Asistente IA</text>
+
+    <!-- Top bar -->
+    <rect x="276" y="24" width="900" height="74" fill="#ffffff"/>
+    <line x1="276" y1="98" x2="1176" y2="98" stroke="#eef1f6" stroke-width="2"/>
+    <text x="300" y="68" fill="#0b1020" font-size="21" font-weight="700">Panel del centro</text>
+    <rect x="900" y="44" width="180" height="34" rx="17" fill="#f1f4fa"/>
+    <text x="922" y="66" fill="#0b1020" font-size="12" font-weight="600" clip-path="url(#twS)">Mateo G.</text>
+    <circle cx="1140" cy="61" r="18" fill="#dbe6fb"/><text x="1140" y="66" fill="#1D4ED8" font-size="13" font-weight="700" text-anchor="middle">VA</text>
+  </g>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="300" y="120" width="274" height="104" rx="14" fill="#f6f8fc" stroke="#eef1f6"/>
+    <text x="322" y="156" fill="#5b647a" font-size="13">Pacientes activos</text>
+    <text x="322" y="196" fill="#0b1020" font-size="34" font-weight="800">24</text>
+    <text x="500" y="196" fill="#16a34a" font-size="13" font-weight="700">+3</text>
+
+    <rect x="588" y="120" width="274" height="104" rx="14" fill="#f6f8fc" stroke="#eef1f6"/>
+    <text x="610" y="156" fill="#5b647a" font-size="13">Sesiones hoy</text>
+    <text x="610" y="196" fill="#0b1020" font-size="34" font-weight="800">18</text>
+    <text x="788" y="196" fill="#1D4ED8" font-size="13" font-weight="700">en curso</text>
+
+    <rect x="876" y="120" width="280" height="104" rx="14" fill="#eff6ff" stroke="#dbe6fb"/>
+    <text x="898" y="156" fill="#1e40af" font-size="13">Objetivos ≥80%</text>
+    <text x="898" y="196" fill="#1D4ED8" font-size="34" font-weight="800">7</text>
+    <text x="1086" y="196" fill="#16a34a" font-size="13" font-weight="700">↑ meta</text>
+  </g>
+
+  <!-- Chart card -->
+  <rect x="300" y="248" width="556" height="332" rx="16" fill="#ffffff" stroke="#eef1f6"/>
+  <text x="324" y="288" fill="#0b1020" font-size="16" font-weight="700">Progreso por dominio</text>
+  <text x="324" y="310" fill="#9aa3b5" font-size="12">Últimas 8 semanas</text>
+  <g stroke="#eef1f6" stroke-width="1.5">
+    <line x1="324" y1="350" x2="832" y2="350"/>
+    <line x1="324" y1="410" x2="832" y2="410"/>
+    <line x1="324" y1="470" x2="832" y2="470"/>
+    <line x1="324" y1="530" x2="832" y2="530"/>
+  </g>
+  <path d="M324 500 L396 470 L468 482 L540 432 L612 400 L684 360 L756 332 L828 304 L828 530 L324 530 Z" fill="url(#area)"/>
+  <polyline class="ln" pathLength="1" points="324,500 396,470 468,482 540,432 612,400 684,360 756,332 828,304" fill="none" stroke="#1D4ED8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="pop" cx="828" cy="304" r="6" fill="#1D4ED8" stroke="#fff" stroke-width="3"/>
+  <circle r="5" fill="#60a5fa"><animateMotion dur="3.6s" begin="1.6s" repeatCount="indefinite" calcMode="linear" path="M324 500 L396 470 L468 482 L540 432 L612 400 L684 360 L756 332 L828 304"/></circle>
+
+  <!-- Sesiones de hoy -->
+  <rect x="876" y="248" width="280" height="170" rx="16" fill="#ffffff" stroke="#eef1f6"/>
+  <text x="898" y="284" fill="#0b1020" font-size="15" font-weight="700">Sesiones de hoy</text>
+  <g>
+    <circle cx="912" cy="320" r="13" fill="#dbe6fb"/><text x="936" y="316" fill="#0b1020" font-size="12.5" font-weight="600">Mateo G.</text><text x="936" y="332" fill="#9aa3b5" font-size="11">09:00 · Lenguaje</text>
+    <circle cx="912" cy="360" r="13" fill="#ede9fe"/><text x="936" y="356" fill="#0b1020" font-size="12.5" font-weight="600">Lucía R.</text><text x="936" y="372" fill="#9aa3b5" font-size="11">10:30 · Social</text>
+    <circle cx="912" cy="400" r="13" fill="#dcfce7"/><text x="936" y="396" fill="#0b1020" font-size="12.5" font-weight="600">Diego P.</text><text x="936" y="412" fill="#9aa3b5" font-size="11">12:00 · Motor</text>
+  </g>
+
+  <!-- ARIA card -->
+  <rect x="876" y="430" width="280" height="150" rx="16" fill="#eff6ff" stroke="#dbe6fb"/>
+  <circle class="pulse" cx="908" cy="466" r="16" fill="#1D4ED8"/><text x="908" y="471" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">AI</text>
+  <text x="934" y="462" fill="#1e40af" font-size="14" font-weight="700">ARIA</text>
+  <text x="934" y="480" fill="#3b5bdb" font-size="11">Hub de IA clínica</text>
+  <text x="900" y="516" fill="#1e3a8a" font-size="12.5">Reporte de sesión generado</text>
+  <rect x="900" y="528" width="232" height="8" rx="4" fill="#cfe0fb"/>
+  <rect class="bar" x="900" y="528" width="200" height="8" rx="4" fill="#1D4ED8"/>
+  <text x="900" y="558" fill="#60a5fa" font-size="11" font-weight="700">Listo en 8 s ✓</text>
+
+  <!-- bottom row -->
+  <rect x="300" y="604" width="856" height="248" rx="16" fill="#f6f8fc" stroke="#eef1f6"/>
+  <text x="324" y="642" fill="#0b1020" font-size="15" font-weight="700">Registro de sesión en curso · Mateo G.</text>
+  <g>
+    <rect x="324" y="664" width="392" height="76" rx="12" fill="#fff" stroke="#eef1f6"/>
+    <text x="344" y="694" fill="#5b647a" font-size="12">Comunicación funcional</text>
+    <rect x="344" y="708" width="352" height="9" rx="4.5" fill="#eef1f6"/><rect class="bar" x="344" y="708" width="300" height="9" rx="4.5" fill="#1D4ED8"/>
+    <text x="660" y="700" fill="#1D4ED8" font-size="13" font-weight="700">85%</text>
+
+    <rect x="740" y="664" width="392" height="76" rx="12" fill="#fff" stroke="#eef1f6"/>
+    <text x="760" y="694" fill="#5b647a" font-size="12">Imitación motora</text>
+    <rect x="760" y="708" width="352" height="9" rx="4.5" fill="#eef1f6"/><rect class="bar" x="760" y="708" width="210" height="9" rx="4.5" fill="#7c3aed"/>
+    <text x="1076" y="700" fill="#7c3aed" font-size="13" font-weight="700">60%</text>
+
+    <rect x="324" y="752" width="392" height="76" rx="12" fill="#fff" stroke="#eef1f6"/>
+    <text x="344" y="782" fill="#5b647a" font-size="12">Habilidades sociales</text>
+    <rect x="344" y="796" width="352" height="9" rx="4.5" fill="#eef1f6"/><rect class="bar" x="344" y="796" width="265" height="9" rx="4.5" fill="#0f766e"/>
+    <text x="660" y="788" fill="#0f766e" font-size="13" font-weight="700">72%</text>
+
+    <rect x="740" y="752" width="392" height="76" rx="12" fill="#fff" stroke="#eef1f6"/>
+    <text x="760" y="782" fill="#5b647a" font-size="12">Autonomía</text>
+    <rect x="760" y="796" width="352" height="9" rx="4.5" fill="#eef1f6"/><rect class="bar" x="760" y="796" width="330" height="9" rx="4.5" fill="#16a34a"/>
+    <text x="1076" y="788" fill="#16a34a" font-size="13" font-weight="700">92%</text>
+  </g>
+
+  <rect x="24" y="24" width="1152" height="852" rx="22" fill="none" stroke="#e3e8f2" stroke-width="2"/>
+</svg>

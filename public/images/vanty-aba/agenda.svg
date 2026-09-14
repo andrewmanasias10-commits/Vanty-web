@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="Inter, Arial, sans-serif">
+  <style>
+    .rise{opacity:0;transform:translateY(10px);animation:rise .55s cubic-bezier(.22,1,.36,1) forwards}
+    @keyframes rise{to{opacity:1;transform:none}}
+    .pop{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .5s cubic-bezier(.34,1.56,.64,1) forwards}
+    @keyframes pop{to{transform:scale(1)}}
+    .pulse{animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  </style>
+  <defs><filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#1b2a52" flood-opacity="0.16"/></filter></defs>
+
+  <rect x="20" y="20" width="720" height="480" rx="20" fill="#ffffff" stroke="#e6ebf4" filter="url(#s)"/>
+  <!-- header -->
+  <rect x="20" y="20" width="720" height="58" rx="20" fill="#0c1838"/><rect x="20" y="48" width="720" height="30" fill="#0c1838"/>
+  <circle cx="48" cy="49" r="5" fill="#ff5f57"/><circle cx="66" cy="49" r="5" fill="#febc2e"/><circle cx="84" cy="49" r="5" fill="#28c840"/>
+  <text x="120" y="54" fill="#fff" font-size="14" font-weight="700">Agenda · Esta semana</text>
+  <rect x="560" y="38" width="156" height="26" rx="13" fill="#16285f"/>
+  <circle cx="578" cy="51" r="5" fill="#4285F4"/><circle cx="592" cy="51" r="5" fill="#0078D4"/>
+  <text x="660" y="55" fill="#bcd3ff" font-size="10.5" text-anchor="middle">Google · Outlook</text>
+
+  <!-- day columns -->
+  <g font-size="11" fill="#8a93a6" font-weight="700" text-anchor="middle">
+    <text x="118" y="112">LUN</text><text x="238" y="112">MAR</text><text x="358" y="112">MIÉ</text><text x="478" y="112">JUE</text><text x="598" y="112">VIE</text>
+  </g>
+  <!-- today highlight -->
+  <rect x="318" y="124" width="80" height="356" rx="12" fill="#eaf3ff"/>
+  <text x="358" y="140" fill="#1257e6" font-size="9.5" font-weight="800" text-anchor="middle">HOY</text>
+  <g stroke="#eef1f6"><line x1="60" y1="150" x2="700" y2="150"/><line x1="60" y1="226" x2="700" y2="226"/><line x1="60" y1="302" x2="700" y2="302"/><line x1="60" y1="378" x2="700" y2="378"/></g>
+
+  <!-- appointment blocks -->
+  <g>
+    <rect class="rise" style="animation-delay:.2s" x="80" y="158" width="76" height="56" rx="9" fill="#dbe6fb"/><rect class="rise" style="animation-delay:.2s" x="88" y="168" width="50" height="7" rx="3" fill="#1257e6"/>
+    <rect class="rise" style="animation-delay:.34s" x="200" y="234" width="76" height="56" rx="9" fill="#ccfbf1"/><rect class="rise" style="animation-delay:.34s" x="208" y="244" width="50" height="7" rx="3" fill="#0f766e"/>
+    <rect class="rise" style="animation-delay:.48s" x="322" y="158" width="72" height="80" rx="9" fill="#1257e6"/><rect class="rise" style="animation-delay:.48s" x="330" y="170" width="48" height="7" rx="3" fill="#bcd3ff"/><rect class="rise" style="animation-delay:.48s" x="330" y="184" width="36" height="6" rx="3" fill="#7fb4ff"/>
+    <rect class="rise" style="animation-delay:.62s" x="322" y="312" width="72" height="56" rx="9" fill="#e3f3ff"/><rect class="rise" style="animation-delay:.62s" x="330" y="322" width="48" height="7" rx="3" fill="#16a6ff"/>
+    <rect class="rise" style="animation-delay:.76s" x="440" y="234" width="76" height="56" rx="9" fill="#fde6ef"/><rect class="rise" style="animation-delay:.76s" x="448" y="244" width="50" height="7" rx="3" fill="#e11d6b"/>
+    <rect class="rise" style="animation-delay:.9s" x="560" y="158" width="76" height="56" rx="9" fill="#fdeccf"/><rect class="rise" style="animation-delay:.9s" x="568" y="168" width="50" height="7" rx="3" fill="#d97706"/>
+    <rect class="rise" style="animation-delay:1.04s" x="560" y="312" width="76" height="56" rx="9" fill="#ede9fe"/><rect class="rise" style="animation-delay:1.04s" x="568" y="322" width="50" height="7" rx="3" fill="#7c3aed"/>
+  </g>
+
+  <!-- new booking chip -->
+  <g class="pop" style="animation-delay:1.3s">
+    <rect x="430" y="400" width="210" height="56" rx="12" fill="#0c1838"/>
+    <circle cx="460" cy="428" r="14" fill="#16a34a" class="pulse"/>
+    <path d="M454 428 l4 4 l8 -9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="484" y="423" fill="#fff" font-size="11" font-weight="700">Nueva cita reservada</text>
+    <text x="484" y="439" fill="#8ea3d6" font-size="10">Familia · vía enlace</text>
+  </g>
+</svg>
