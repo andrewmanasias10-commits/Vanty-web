@@ -1,4 +1,4 @@
-# Vanty-Web — Landing Page
+# Vanty Web — Landing Page
 
 Plataforma web oficial y panel de administración para centros de terapia y neuropsicología, optimizada para la gestión de terapias de Análisis Conductual Aplicado (ABA).
 
